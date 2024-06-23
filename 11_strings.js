@@ -28,3 +28,5 @@ console.log(fname.replace("Raj",123));
 let enterName = prompt("Enter your name");
 let userName = `Your username will be @${enterName+enterName.length}`;
 console.log(userName);
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+let gameName = new String("Pubg");
