@@ -11,3 +11,5 @@ let a;    // undefined
 let b = null; // object 
 let c = BigInt(123); // bigint 
 let d = Symbol("hello"); // symbol
+
+
