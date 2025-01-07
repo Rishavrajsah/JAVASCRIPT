@@ -17,13 +17,13 @@
 //* ============================
 //* Tricky Interview Questions
 //* ============================
-// console.log(10 + "20");
-// console.log(9 - "5");
-// console.log("Java" + "Script");
-// console.log(" " + " ");
-// console.log(" " + 0);
-// console.log("vinod" - "thapa");
-// console.log(true + true);
-// console.log(true + false);
-// console.log(false + true);
-// console.log(false - true);
+console.log(10 + "20"); // 1020 string
+console.log(9 - "5"); // 4  due to Type coercion 
+console.log("Java" + "Script");
+console.log(" " + " ");
+console.log(" " + 0);
+console.log("vinod" - "thapa");
+console.log(true + true); // 1 +1
+console.log(true + false);// 1+0
+console.log(false + true);//0+1
+console.log(false - true);//0-1
