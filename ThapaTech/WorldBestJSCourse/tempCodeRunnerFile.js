@@ -1,5 +1,6 @@
-var num = 1;
-while (num <= 10) {
-  console.log(num);
-  num++;
+function greet(name) {
+  console.log("Hello " + name + ", Welcome to Thapa Technical JS Course");
 }
+
+greet("ram");
+greet("sita");
