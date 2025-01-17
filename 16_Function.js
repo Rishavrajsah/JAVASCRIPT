@@ -91,3 +91,14 @@ let calSqr = (i => {
     console.log(`square of number ${i} is equal to ${i*i}`);
 });
 arr.forEach(calSqr);
+
+function printHelloo(name) {
+    console.log("hello Mr "+name+" , how are you");
+    
+}
+printHelloo("Rishav");
+
+let something = (a,b)=>{
+    return a+b;
+}
+console.log(something(5,5));
