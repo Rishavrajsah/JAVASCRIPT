@@ -1,6 +1,5 @@
-function greet(name) {
-  console.log("Hello " + name + ", Welcome to Thapa Technical JS Course");
-}
+var result = function (a, b) {
+  console.log(a + b);
+};
 
-greet("ram");
-greet("sita");
+result(10, 15);

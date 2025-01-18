@@ -246,3 +246,9 @@ const isPalindrome = (str) => {
 };
 
 console.log(isPalindrome("level"));
+
+// var result = function (a, b) {
+//   console.log(a + b);
+// };
+
+// result(10, 15);

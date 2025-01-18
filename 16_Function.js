@@ -102,3 +102,26 @@ let something = (a,b)=>{
     return a+b;
 }
 console.log(something(5,5));
+
+(function (a,b) {
+    console.log(a+b);
+    
+})(5,6);
+
+function add(a=3,b=3) {
+    return a+b;
+}
+console.log(add(4,4));
+console.log(add());
+
+// reverse a number 
+function Reverse(str) {
+    rev ="";
+    for (let index = str.length-1; index >= 0; index--) {
+        rev = rev + str[index];
+    }
+    console.log(rev);
+}
+Reverse("Rishav");
+
+
