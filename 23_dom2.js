@@ -25,6 +25,7 @@ document.querySelector('#title')  // for id search
 document.querySelector('.heading') // for class search
 
 // querySelectorAll
+// shortcut ul>li*3
 /*<ul>
             <li class="list-item">one</li>
             <li class="list-item">two</li>
@@ -34,4 +35,14 @@ document.querySelector('.heading') // for class search
 */
 const tempLiList = document.querySelectorAll('li')  // select all iteam in list not only first element
 console.log(tempLiList); // prove Nodelist not an array
+tempLiList[1].style.color='green'
+//forEach loop
+tempLiList.forEach(function (l) {
+    l.style.backgroundColor='green'
+})
 
+
+document.getElementsByClassName('list-item')  // give HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+// this HTMLCollection does not support forEach loop  need to convert into array by Array.from()
+const tempClassList = document.getElementsByClassName('list-item')
+Array.from(tempClassList) // converted to array
