@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Properties Demo</title>
+</head>
+<body style="height: 100vh; padding: 20px;">
+  <button id="myBtn">Click Me</button>
+  <input type="text" id="myInput" placeholder="Type something..." />
+  <p id="output"></p>
+
+  <script>
+    const output = document.getElementById('output');
+
+    // Mouse Event
+    document.getElementById('myBtn').addEventListener('click', function (event) {
+      output.innerHTML = `
+        <strong>Mouse Event:</strong><br>
+        type: ${event.type}<br>
+        timestamp: ${event.timeStamp}<br>
+        defaultPrevented: ${event.defaultPrevented}<br>
+        target: ${event.target.tagName}<br>
+        currentTarget: ${event.currentTarget.tagName}<br>
+        clientX: ${event.clientX}<br>
+        clientY: ${event.clientY}<br>
+        screenX: ${event.screenX}<br>
+        screenY: ${event.screenY}<br>
+        altKey: ${event.altKey}<br>
+        ctrlKey: ${event.ctrlKey}<br>
+        shiftKey: ${event.shiftKey}<br>
+      `;
+    });
+
+    // Keyboard Event
+    document.getElementById('myInput').addEventListener('keydown', function (event) {
+      output.innerHTML = `
+        <strong>Keyboard Event:</strong><br>
+        type: ${event.type}<br>
+        keyCode: ${event.keyCode}<br>
+        altKey: ${event.altKey}<br>
+        ctrlKey: ${event.ctrlKey}<br>
+        shiftKey: ${event.shiftKey}<br>
+        target: ${event.target.tagName}<br>
+        currentTarget: ${event.currentTarget.tagName}<br>
+      `;
+    });
+  </script>
+</body>
+</html>

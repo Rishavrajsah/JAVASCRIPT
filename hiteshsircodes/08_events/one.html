@@ -12,6 +12,8 @@
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <!-- way 1 -->
+            <!-- <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" onclick="alert('owl')" ></li> -->
             <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
             <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
             <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
@@ -19,17 +21,35 @@
    </div>
 </body>
 <script>
+//way 2
     // document.getElementById('owl').onclick = function(){
     //     alert("owl clicked")
     // }
 
+// way 3
+
+    // document.getElementById('owl').addEventListener('click',function () {
+    //     alert("owl");
+    // })
+// other previous ways
      // attachEvent()
     // jQuery - on
-
+// topics to prepare yourself
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById('owl').addEventListener('click',function (e) {
+    //     console.log(e);
+        
+    // },false)
+    // this false represent event propogation
+//Event Propagation : Event propagation defines in which order the event will trigger.
+// There are 2 types of Event propagation :
+
+//  1. Event Bubbling : It is a default feature of event listener. In event bubbling the event occur from child to parent and if we want that the parent event will not occur if child event is occurring then we use stoPropagation() function .
+// inside to outside event propogation called bubbling
 
     // document.getElementById('images').addEventListener('click', function(e){
     //     console.log("clicked inside the ul");
@@ -37,26 +57,50 @@
 
     // document.getElementById('owl').addEventListener('click', function(e){
     //     console.log("owl clicked");
-    //     e.stopPropagation()
+    //     // e.stopPropagation()  // gor not bubbling
     // }, false)
-    
+
+// 2.Event Capturing : Event Capturing defines the order of event from parent to child. It can be achieved by passing the third argument inside the addEventListener() "true".
+
+// document.getElementById('images').addEventListener('click', function(e){
+//         console.log("clicked inside the ul");
+//     }, true)
+
+//     document.getElementById('owl').addEventListener('click', function(e){
+//         console.log("owl clicked");
+//         // e.stopPropagation()  
+//     }, true)
+
+
+
     // document.getElementById('google').addEventListener('click',function(e){
     //     e.preventDefault();
     //     e.stopPropagation()
     //     console.log("google clicked");
     // }, false)
    
+
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     // console.log(e.target);
+    //     // console.log(e.target.parentNode);
+    //     let removeIt = e.target.parentNode;
+    //     // way 1
+    //     // removeIt.remove()
+    //     // way2
+    //     removeIt.parentNode.removeChild(removeIt)
+    //     })
     
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
+    // strict check
+    // document.querySelector('#images').addEventListener('click', function(e){
+    //     console.log(e.target.tagName);
+    //     if (e.target.tagName === 'IMG') {
+    //         console.log(e.target.id);
+    //         let removeIt = e.target.parentNode
+    //         removeIt.remove()
+    //     }
     
         
-    })
+    // })
     
     //removeIt.parentNode.removeChild(removeIt)
 </script>
